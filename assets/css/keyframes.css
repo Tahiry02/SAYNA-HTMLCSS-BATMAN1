@@ -1,0 +1,52 @@
+@keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes popup {
+    from {
+      opacity: 0;
+      transform: scale(0);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+ /* Classe pour les éléments déjà visibles lors du chargement */
+ .animation {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 2s, transform 3s linear;
+}
+
+ .animation.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.other {
+  opacity: 0;
+  transform: translateX(-30%);
+  transition: opacity 2s, transform 3s ease-in-out;
+}
+
+ .other.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+.zoom{
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 4s, transform 4s;
+}
+
+.zoom.show{
+  opacity: 1;
+  transform: scale(1);
+}
